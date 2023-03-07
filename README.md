@@ -2,7 +2,7 @@
 
 ## 介绍
 
-基于[`vue-element-plus-admin`](https://gitee.com/kailong110120130/vue-element-plus-admin)，参考[yudao-ui-admin-vue3](https://gitee.com/yudaocode/yudao-ui-admin-vue3)，进行二次开发的管理端后台。
+基于[`vue-element-plus-admin-1.9.4`](https://gitee.com/kailong110120130/vue-element-plus-admin)，参考[yudao-ui-admin-vue3-1.7.1](https://gitee.com/yudaocode/yudao-ui-admin-vue3)，进行二次开发的管理端后台。
 
 - **最新技术栈**：使用 Vue3、Vite4 等前端前沿技术开发
 - **TypeScript**: 应用程序级 JavaScript 的语言
@@ -66,9 +66,10 @@
 ## 安装和使用
 
 - 获取代码：`git clone https://github.com/youyouzh/ui-admin.git`
-- 安装依赖: `pnpm install`
-- 运行: `pnpm run dev`
-- 打包: `pnpm run build:pro`
+- 安装yarn: `npm install yarn -g`
+- 安装依赖: `yarn install`
+- 运行: `yarn run dev`
+- 打包: `yarn run build:pro`
 
 ## 如何贡献
 

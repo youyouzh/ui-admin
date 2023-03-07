@@ -3,6 +3,7 @@ import type { RouteRecordRaw } from 'vue-router'
 import type { App } from 'vue'
 import { Layout, getParentLayout } from '@/utils/routerHelper'
 import { useI18n } from '@/hooks/web/useI18n'
+import remainingRouter from './modules/remaining'
 
 const { t } = useI18n()
 
@@ -546,9 +547,10 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
 ]
 
 const router = createRouter({
+  // createWebHashHistory URL带#，createWebHistory URL不带#
   history: createWebHashHistory(),
   strict: true,
-  routes: constantRouterMap as RouteRecordRaw[],
+  routes: remainingRouter as RouteRecordRaw[],
   scrollBehavior: () => ({ left: 0, top: 0 })
 })
 

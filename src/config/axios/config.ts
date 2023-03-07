@@ -29,12 +29,12 @@ const config: {
   /**
    * 接口成功返回状态码
    */
-  result_code: '0000',
+  result_code: 200,
 
   /**
    * 接口请求超时时间
    */
-  request_timeout: 60000,
+  request_timeout: 30000,
 
   /**
    * 默认接口请求类型

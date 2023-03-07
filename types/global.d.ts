@@ -1,4 +1,3 @@
-import type { CSSProperties } from 'vue'
 declare global {
   declare interface Fn<T = any> {
     (...arg: T[]): T
@@ -19,7 +18,7 @@ declare global {
     | 'application/x-www-form-urlencoded'
     | 'multipart/form-data'
 
-  declare type AxiosMethod = 'get' | 'post' | 'delete' | 'put'
+  declare type AxiosMethod = 'get' | 'post' | 'delete' | 'put' | 'GET' | 'POST' | 'DELETE' | 'PUT'
 
   declare type AxiosResponseType = 'arraybuffer' | 'blob' | 'document' | 'json' | 'text' | 'stream'
 
@@ -35,5 +34,16 @@ declare global {
   declare interface IResponse<T = any> {
     code: string
     data: T extends any ? T : T & any
+  }
+
+  declare interface PageParam {
+    pageSize?: number
+    pageNo?: number
+  }
+
+  declare interface Tree {
+    id: number
+    name: string
+    children?: Tree[] | any[]
   }
 }

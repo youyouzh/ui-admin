@@ -25,9 +25,9 @@ import { defineComponent } from 'vue'
 
     noTagsView: true          如果设置为true，则不会出现在tag中(默认 false)
 
-    activeMenu: '/dashboard'  显示高亮的路由路径
+    activeMenu: '/home'  显示高亮的路由路径
 
-    followAuth: '/dashboard'  跟随哪个路由进行权限过滤
+    followAuth: '/home'  跟随哪个路由进行权限过滤
 
     canTo: true               设置为true即使hidden为true，也依然可以进行路由跳转(默认 false)
   }
@@ -61,14 +61,21 @@ declare global {
     children?: AppRouteRecordRaw[]
     props?: Recordable
     fullPath?: string
+    keepAlive?: boolean
   }
 
   declare interface AppCustomRouteRecordRaw extends Omit<RouteRecordRaw, 'meta'> {
+    icon: any
     name: string
     meta: RouteMeta
     component: string
+    componentName?: string
     path: string
     redirect: string
     children?: AppCustomRouteRecordRaw[]
+    keepAlive?: boolean
+    visible?: boolean
+    parentId?: number
+    alwaysShow?: boolean
   }
 }
